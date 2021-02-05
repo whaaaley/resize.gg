@@ -87,6 +87,7 @@ $icon-copy: ic-content-copy-24px($dark);
     font: 600 14px/44px sans-serif;
     background: url($icon-copy) 12px no-repeat;
     background-color: $blurple;
+    cursor: pointer;
   }
 
   input {
