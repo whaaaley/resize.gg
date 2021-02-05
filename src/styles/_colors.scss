@@ -1,0 +1,54 @@
+
+$white: #fff;
+$black: #000;
+
+// RGB From LAB Sliders
+
+$dark-600: rgb(24, 26, 29);
+$dark-500: rgb(34, 37, 43);
+$dark-400: rgb(43, 48, 59);
+$dark-300: rgb(52, 60, 76);
+
+$blurple: rgb(126, 139, 233);
+$light: rgb(205, 213, 231);
+
+$dark: $dark-600;
+$background: $dark-500;
+$dim: $dark-400;
+$dim2: $dark-300;
+
+//
+
+// .color-demo {
+//   display: flex;
+//   padding: 64px 0 0;
+
+//   div {
+//     flex: 1;
+//     height: 72px;
+//   }
+// }
+
+// .dark {
+//   background: $dark;
+// }
+
+// .background {
+//   background: $background;
+// }
+
+// .dim {
+//   background: $dim;
+// }
+
+// .dim2 {
+//   background: $dim2;
+// }
+
+// .blurple {
+//   background: $blurple;
+// }
+
+// .light {
+//   background: $light;
+// }

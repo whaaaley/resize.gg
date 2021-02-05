@@ -1,0 +1,121 @@
+
+$placeholder-1: mix($blurple, $dark, 12.5%);
+$placeholder-2: mix($blurple, $dark, 25%);
+
+$icon-link: ic-link-24px($blurple);
+$icon-unlink: ic-link-off-24px($blurple);
+$icon-copy: ic-content-copy-24px($dark);
+
+// .input {
+//   display: flex;
+// }
+
+.arrows {
+  flex: 1 0 44px;
+  // margin: 0 0 0 -2px;
+  border-radius: 0 4px 4px 0;
+  background: $dark-400;
+
+  div {
+    width: 44px;
+    height: 22px;
+    cursor: pointer;
+
+    &:hover {
+      background: $dark-300;
+    }
+  }
+}
+
+.home {
+  input {
+    border: 2px solid $dark-600;
+    // border-radius: 4px 0 0 4px;
+    border-radius: 4px;
+    outline: none;
+    font: 400 24px/40px sans-serif;
+    text-indent: 18px;
+    background: $dark-600;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &::placeholder {
+      color: $dark-400;
+    }
+
+    &:focus {
+      border-color: $blurple;
+    }
+  }
+}
+
+.link {
+  flex: 1 0 48px;
+  background: url($icon-link) center no-repeat;
+
+  &.-unlink {
+    background-image: url($icon-unlink);
+  }
+}
+
+.dimensions {
+  display: flex;
+}
+
+.ratios {
+  padding: 24px 0;
+}
+
+.row {
+  display: flex;
+
+  + .row {
+    padding: 12px 0 0;
+  }
+}
+
+.placeholder {
+  display: flex;
+
+  div {
+    margin: 0 0 0 -2px;
+    padding: 0 12px 0 (48px - 6px);
+    border-radius: 0 4px 4px 0;
+    color: $dark-600;
+    font: 600 14px/44px sans-serif;
+    background: url($icon-copy) 12px no-repeat;
+    background-color: $blurple;
+  }
+
+  input {
+    flex: 1;
+    font: 400 14px/16px sans-serif;
+  }
+}
+
+.button {
+  flex: 1;
+  border-radius: 4px;
+  color: $blurple;
+  color: $light;
+  font: 400 14px/36px sans-serif;
+  text-align: center;
+  background: $dark-400;
+  cursor: pointer;
+
+  + .button {
+    margin: 0 0 0 12px;
+  }
+
+  &:hover {
+    background: $dark-300;
+  }
+
+  &.-active {
+    color: $dark-600;
+    font-weight: 600;
+    background: $blurple;
+  }
+}
