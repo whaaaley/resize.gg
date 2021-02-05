@@ -1,7 +1,7 @@
 
 # resize.gg (wip)
 
-This project is hosted here https://resize.gg/ (soon)
+This project is hosted here https://resize-gg.netlify.app/
 
 # Build and Develop
 
