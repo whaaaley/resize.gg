@@ -1,5 +1,5 @@
 
-# resize.gg
+# resize.gg (wip)
 
 This project is hosted here https://resize.gg/ (soon)
 
