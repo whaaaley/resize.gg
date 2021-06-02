@@ -8,7 +8,7 @@ import Frame from './_frame'
  *
  */
 
-const oninputWidth = ({ resize }) => value => {
+const oninputWidth = ({ resize }, value) => {
   resize.width = value
 
   resize.link === true
@@ -18,7 +18,7 @@ const oninputWidth = ({ resize }) => value => {
   return { resize }
 }
 
-const oninputHeight = ({ resize }) => value => {
+const oninputHeight = ({ resize }, value) => {
   resize.height = value
 
   resize.link === true
@@ -35,14 +35,14 @@ const onclickLink = ({ resize }) => {
   return { resize }
 }
 
-const onclickRatio = ({ resize }) => data => {
+const onclickRatio = ({ resize }, data) => {
   resize.ratio = data.ratio
   resize.height = resize.width / resize.ratio
 
   return { resize }
 }
 
-const onclickCopy = ({ clipboard }, dispatch) => {
+const onclickCopy = ({ clipboard }) => async dispatch => {
   setTimeout(() => {
     dispatch(({ clipboard }) => {
       clipboard.copied = false
