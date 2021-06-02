@@ -1,45 +1,7 @@
 
 // 1. NOTE: (iOS Safari) Enable momentum scrolling on overflow elements
 // 2. NOTE: (WebKit/Blink) (Non-standard) Scrollbars overlay content
-// 3. NOTE: (Mobile devices) Prevent font-size scaling
-// 4. NOTE: (Touch devices) Prevent tap delay
-
-* {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  text-align: inherit;
-  text-decoration: inherit;
-  -webkit-overflow-scrolling: touch; // 1
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-html {
-  overflow: overlay; // 2
-  // -webkit-text-size-adjust: none; // 3
-  // text-size-adjust: none; // 3
-  touch-action: manipulation; // 4
-  box-sizing: border-box;
-}
-
-body {
-  color: $light;
-  font: 400 1em/1 sans-serif;
-  overflow: hidden;
-  background: $dark;
-}
-
-input {
-  min-width: 0;
-}
+// 3. NOTE: (Touch devices) Prevent tap delay
 
 ::-webkit-scrollbar {
   width: 24px;
@@ -49,15 +11,50 @@ input {
 ::-webkit-scrollbar-thumb {
   border: 8px solid transparent;
   border-radius: 12px;
-  box-shadow: inset 0 0 0 4px $blurple;
+  box-shadow: inset 0 0 0 4px $primary;
 }
 
-// NOTE: This sets the maximum site width when using this viewport meta tag.
+*:not(svg *) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  -webkit-overflow-scrolling: touch; // 1
+
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  overflow: overlay; // 2
+  touch-action: manipulation; // 3
+  box-sizing: border-box;
+}
+
+body {
+  color: $white;
+  font: 400 1em/1 $font-inter;
+  background: $dark-500;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+// NOTE: This sets the maximum page width when using this viewport meta tag.
 // Mobile devices will downscale from this size.
 // <meta name="viewport" content="width=device-width,maximum-scale=1">
 
-// @media (max-width: 375px) {
-//   body {
-//     width: 375px;
-//   }
-// }
+@media (max-width: 375px) {
+  body {
+    width: 375px;
+    background: $dark-400;
+  }
+}

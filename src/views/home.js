@@ -1,5 +1,5 @@
 
-import { div, input, text } from 'pocket/tags/html'
+import { button, div, input, text } from 'pocket/tags/html'
 import Frame from './_frame'
 
 /**
@@ -51,6 +51,7 @@ const onclickCopy = ({ clipboard }) => async dispatch => {
   }, 1000)
 
   clipboard.copied = true
+
   return { clipboard }
 }
 
@@ -84,7 +85,7 @@ const ButtonComponent = ({ resize }, dispatch) => data => {
     dispatch(onclickRatio, data)
   }
 
-  return div({ class: classList, onclick }, [
+  return button({ class: classList, onclick }, [
     text(data.text)
   ])
 }
@@ -94,11 +95,13 @@ const PlaceholderComponent = (state, dispatch) => data => {
   const height = Math.round(state.resize.height)
 
   const url = `https://via.placeholder.com/${width}x${height}`
-  const children = [text(state.clipboard.copied === true ? 'Copied!' : 'Copy')]
+  const children = [
+    text(state.clipboard.copied === true ? 'Copied!' : 'Copy')
+  ]
 
   return div({ class: 'placeholder' }, [
     input({ id: 'clipboard', type: 'text', value: url }),
-    div({
+    button({
       onclick: () => {
         document.getElementById('clipboard').select()
         document.execCommand('copy')
