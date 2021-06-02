@@ -1,6 +1,6 @@
 
 import { readFileSync } from 'fs'
-import { body, html, link, meta, noscript, script, style, title, div } from './lib/vnodes/html'
+import { body, html, link, meta, noscript, script, style, title, div } from 'pocket/tags/html'
 
 const styles = PROD === true
   ? style(readFileSync('./public/main.min.css', 'utf8'))
