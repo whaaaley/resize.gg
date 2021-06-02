@@ -2,12 +2,12 @@
 import { readFileSync } from 'fs'
 import { body, html, link, meta, noscript, script, style, title, div } from 'pocket/tags/html'
 
-const styles = PROD === true
-  ? style(readFileSync('./public/main.min.css', 'utf8'))
+const styles = process.env.PROD === true
+  ? style(readFileSync('./public/main.css', 'utf8'))
   : link({ rel: 'stylesheet', href: '/main.css' })
 
-const scripts = PROD === true
-  ? script(readFileSync('./public/app.min.js', 'utf8'))
+const scripts = process.env.PROD === true
+  ? script(readFileSync('./public/app.js', 'utf8'))
   : script({ defer: true, src: '/app.js' })
 
 const render = data => {
