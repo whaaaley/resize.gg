@@ -12,11 +12,3 @@ $ make       # build for production
 $ make start # start the development server
 $ make clean # delete /node_modules, /public, /tmp, and package-lock.json
 ```
-
-# Todo
-+ Increment by 10's
-+ Increment to nearest round number on both sides
-+ Clickable spinner arrows
-+ Editable ratio field
-+ Swap width and height button
-+ More a11y features

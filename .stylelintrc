@@ -4,10 +4,52 @@
     "stylelint-order"
   ],
   "rules": {
+    "declaration-empty-line-before": "never",
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignoreAtRules": [
+          "import",
+          "use",
+          "else"
+        ]
+      }
+    ],
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["extend"]
+        "ignoreAtRules": [
+          "use",
+          "forward",
+          "import",
+          "mixin",
+          "include",
+          "function",
+          "return",
+          "extend",
+          "error",
+          "warn",
+          "debug",
+          "at-root",
+          "if",
+          "else",
+          "each",
+          "for",
+          "while"
+        ]
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always-multi-line",
+      {
+        "ignoreAtRules": [
+          "if",
+          "else"
+        ]
       }
     ],
     "property-disallowed-list": [
@@ -18,30 +60,33 @@
       "flex-direction",
       "flex-wrap",
 
-      "grid",
-      "grid-after",
-      "grid-area",
+      "column-gap",
+      "row-gap",
+
+      "grid-gap",
+      "grid-column-gap",
+      "grid-row-gap",
+
       "grid-auto-columns",
       "grid-auto-flow",
       "grid-auto-rows",
-      "grid-before",
-      "grid-column",
-      "grid-column-end",
-      "grid-column-gap",
-      "grid-column-start",
-      "grid-columns",
-      "grid-end",
-      "grid-gap",
-      "grid-row",
-      "grid-row-end",
-      "grid-row-gap",
-      "grid-row-start",
-      "grid-rows",
-      "grid-start",
+
       "grid-template",
       "grid-template-areas",
       "grid-template-columns",
       "grid-template-rows",
+
+      "grid-start",
+      "grid-end",
+
+      "grid-column-start",
+      "grid-column-end",
+
+      "grid-row-start",
+      "grid-row-end",
+
+      "grid-before",
+      "grid-after",
 
       "font-smoothing"
     ],
@@ -51,48 +96,25 @@
     ],
     "order/properties-order": [
       "flex",
-      "flex-grow",
-      "flex-shrink",
-      "flex-basis",
 
       "align-self",
       "order",
+
+      "grid-area",
+      "grid-column",
+      "grid-row",
 
       "display",
       "visibility",
 
       "flex-flow",
-      "flex-direction",
-      "flex-wrap",
 
       "align-items",
       "align-content",
       "justify-content",
 
       "grid",
-      "grid-after",
-      "grid-area",
-      "grid-auto-columns",
-      "grid-auto-flow",
-      "grid-auto-rows",
-      "grid-before",
-      "grid-column",
-      "grid-column-end",
-      "grid-column-gap",
-      "grid-column-start",
-      "grid-columns",
-      "grid-end",
-      "grid-gap",
-      "grid-row",
-      "grid-row-end",
-      "grid-row-gap",
-      "grid-row-start",
-      "grid-rows",
-      "grid-start",
-      "grid-template",
-      "grid-template-areas",
-      "grid-template-columns",
-      "grid-template-rows",
+      "gap",
 
       "position",
       "z-index",
@@ -168,7 +190,6 @@
       "font-family",
       "font-size",
       "font-size-adjust",
-      "font-smoothing",
       "font-stretch",
       "font-style",
       "font-variant",
@@ -177,6 +198,9 @@
       "font-emphasize",
       "font-emphasize-position",
       "font-emphasize-style",
+
+      "font-display",
+      "font-named-instance",
 
       "letter-spacing",
       "line-height",

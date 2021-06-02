@@ -1,14 +1,11 @@
 
-@import '@whaaaley/material-icons-scss/style/filled';
+@import '@whaaaley/material-icons-scss/extended/filled';
+
 @import 'styles/colors';
-
-// critical
+@import 'styles/fonts';
 @import 'styles/reset';
-// @import 'styles/fonts';
 
-// components
 @import 'styles/frame';
 
-// views
 @import 'styles/home';
 @import 'styles/missing';

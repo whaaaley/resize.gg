@@ -1,54 +1,25 @@
 
+@import 'lib/alpha';
+@import 'lib/lab';
+
 $white: #fff;
 $black: #000;
 
-// RGB From LAB Sliders
+// Colors
+$primary: lab(60, 31, -64);
 
-$dark-600: rgb(24, 26, 29);
-$dark-500: rgb(34, 37, 43);
-$dark-400: rgb(43, 48, 59);
-$dark-300: rgb(52, 60, 76);
+// Desaturated Light
+$light-600: lab(95, 0, -5);
+$light-500: lab(90, 0, -6);
+$light-400: lab(85, 0, -7);
+$light-300: lab(80, 0, -8);
+$light-200: lab(75, 0, -9);
+$light-100: lab(70, 0, -10);
 
-$blurple: rgb(126, 139, 233);
-$light: rgb(205, 213, 231);
-
-$dark: $dark-600;
-$background: $dark-500;
-$dim: $dark-400;
-$dim2: $dark-300;
-
-//
-
-// .color-demo {
-//   display: flex;
-//   padding: 64px 0 0;
-
-//   div {
-//     flex: 1;
-//     height: 72px;
-//   }
-// }
-
-// .dark {
-//   background: $dark;
-// }
-
-// .background {
-//   background: $background;
-// }
-
-// .dim {
-//   background: $dim;
-// }
-
-// .dim2 {
-//   background: $dim2;
-// }
-
-// .blurple {
-//   background: $blurple;
-// }
-
-// .light {
-//   background: $light;
-// }
+// Desaturated Dark
+$dark-600: lab(5, 0, -5);
+$dark-500: lab(10, 0, -6);
+$dark-400: lab(15, 0, -7);
+$dark-300: lab(20, 0, -8);
+$dark-200: lab(25, 0, -9);
+$dark-100: lab(30, 0, -10);

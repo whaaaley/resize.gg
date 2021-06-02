@@ -1,18 +1,10 @@
 
-$placeholder-1: mix($blurple, $dark, 12.5%);
-$placeholder-2: mix($blurple, $dark, 25%);
-
-$icon-link: ic-link-24px($blurple);
-$icon-unlink: ic-link-off-24px($blurple);
-$icon-copy: ic-content-copy-24px($dark);
-
-// .input {
-//   display: flex;
-// }
+$icon-link: ic-link-24px($primary);
+$icon-unlink: ic-link-off-24px($primary);
+$icon-copy: ic-content-copy-24px($white);
 
 .arrows {
   flex: 1 0 44px;
-  // margin: 0 0 0 -2px;
   border-radius: 0 4px 4px 0;
   background: $dark-400;
 
@@ -29,24 +21,19 @@ $icon-copy: ic-content-copy-24px($dark);
 
 .home {
   input {
-    border: 2px solid $dark-600;
-    // border-radius: 4px 0 0 4px;
+    border: 2px solid $dark-500;
     border-radius: 4px;
     outline: none;
     font: 400 24px/40px sans-serif;
     text-indent: 18px;
-    background: $dark-600;
-
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    }
+    background: $dark-500;
 
     &::placeholder {
-      color: $dark-400;
+      color: $dark-100;
     }
 
     &:focus {
-      border-color: $blurple;
+      border-color: $primary;
     }
   }
 }
@@ -60,9 +47,25 @@ $icon-copy: ic-content-copy-24px($dark);
   }
 }
 
+//
+//
+//
+
 .dimensions {
   display: flex;
 }
+
+.dimensions > input {
+  min-width: 0;
+}
+
+.dimensions > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+//
+//
+//
 
 .ratios {
   padding: 24px 0;
@@ -79,19 +82,18 @@ $icon-copy: ic-content-copy-24px($dark);
 .placeholder {
   display: flex;
 
-  div {
-    margin: 0 0 0 -2px;
+  > button {
     padding: 0 12px 0 (48px - 6px);
     border-radius: 0 4px 4px 0;
-    color: $dark-600;
     font: 600 14px/44px sans-serif;
-    background: url($icon-copy) 12px no-repeat;
-    background-color: $blurple;
+    background: $primary url($icon-copy) 12px no-repeat;
     cursor: pointer;
   }
 
-  input {
+  > input {
     flex: 1;
+    border-width: 2px 0 2px 2px;
+    border-radius: 4px 0 0 4px;
     font: 400 14px/16px sans-serif;
   }
 }
@@ -99,11 +101,9 @@ $icon-copy: ic-content-copy-24px($dark);
 .button {
   flex: 1;
   border-radius: 4px;
-  color: $blurple;
-  color: $light;
   font: 400 14px/36px sans-serif;
   text-align: center;
-  background: $dark-400;
+  background: $dark-300;
   cursor: pointer;
 
   + .button {
@@ -111,12 +111,11 @@ $icon-copy: ic-content-copy-24px($dark);
   }
 
   &:hover {
-    background: $dark-300;
+    background: $dark-100;
   }
 
   &.-active {
-    color: $dark-600;
     font-weight: 600;
-    background: $blurple;
+    background: $primary;
   }
 }
