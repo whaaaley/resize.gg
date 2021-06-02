@@ -1,5 +1,5 @@
 
-import { div, input, text } from '../lib/vnodes/html'
+import { div, input, text } from 'pocket/tags/html'
 import Frame from './_frame'
 
 /**

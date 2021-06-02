@@ -1,5 +1,5 @@
 
-import { div } from '../lib/vnodes/html'
+import { div } from 'pocket/tags/html'
 
 export const Frame = slot => (state, dispatch) => {
   return div({ class: 'frame' }, [
