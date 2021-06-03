@@ -6,10 +6,16 @@
   "extends": [
     "standard"
   ],
+  "plugins": [
+    "react"
+  ],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
-    "impliedStrict": true
+    "impliedStrict": true,
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "arrow-parens": [
@@ -19,6 +25,9 @@
     "quote-props": [
       "error",
       "consistent"
+    ],
+    "react/jsx-uses-vars": [
+      "error"
     ]
   },
   "globals": {
